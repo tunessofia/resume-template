@@ -1,0 +1,8 @@
+- url: 'https://github.com/your_username'
+  icon: github
+
+- url: 'https://www.linkedin.com/in/your_username/'
+  icon: linkedin
+
+- url: 'https://<your_link>.medium.com/'
+  icon: medium

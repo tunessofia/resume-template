@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+<div class="min-h-screen min-w-full bg-gray-100 lg:p-10">
+    <div class="relative w-full max-w-full mx-auto">
+        <div class="relative bg-white shadow-lg sm:rounded-3xl">
+            <div class="lg:px-20 py-6 mx-12">
+                <div class="flex flex-wrap lg:space-x-4 lg:flex-nowrap">
+
+                    <!-- first column -->
+                    <div class="items-center justify-center text-center w-full lg:w-1/2">
+                        <img alt="profile_photo" class="inline object-contain w-3/4 md:w-4/12 rounded-full border-12 border-gray-100" src="{{ "
+                            /assets/img/profile_photo.jpeg" }}" />
+                        <div class="mt-10 text-left leading-loose">
+                            <div class="text-center lg:mx-auto lg:w-1/2 tracking-wider uppercase">
+                                <div class="px-2">
+                                    <h1 class="text-sea-dark font-bold">Your name</h1>
+                                    <h2>Your job title</h2>
+                                </div>
+                            </div>
+
+
+                            <!--about me-->
+                            <div class="m-1 px-2">
+                                <p class="mt-8">Ipsum Lorem</p><br>
+                                <p>Dolor sit amet, consectetur adipiscing elit. Ut sed massa felis. 
+                                    Maecenas a risus leo. Donec nunc lorem, congue ac augue in, rutrum fermentum ante. 
+                                    Curabitur eget suscipit leo.
+                                <p>
+                                <p>Pellentesque quis commodo odio. Morbi venenatis egestas mi. Duis convallis nibh dictum elementum finibus. 
+                                    Nunc eu malesuada eros.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end first column -->
+
+                    <!-- second column -->
+                    <div class="flex flex-col w-full lg:w-1/2 leading-loose">
+                        {% include section.html icon="contact" title="Contacts" %}
+
+                        <div class="m-4 mt-4 flex flex-col">
+                            <div class="flex space-x-2">
+                                <h3 class="w-16">Address:</h3>
+                                <h4>Your address</h4>
+                            </div>
+                            <div class="flex items-center space-x-2 mt-1">
+                                <h3 class="w-16">Email:</h3>
+                                    <a id="ae" href="javascript:void(0);" target="popup"
+                                        >Here!</a>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <h3 class="w-16">Social:</h3>
+
+                                {% for link in site.data.social_links %}
+
+                                {% assign url=link.url %}
+                                {% assign icon=link.icon %}
+
+                                {% include link.html url=url icon=icon %}
+
+                                {% endfor %}
+                            </div>
+                        </div>
+
+
+                        {% for section in site.data.sections %}
+                        {% assign icon=section.icon %}
+                        {% assign title=section.section %}
+                        {% assign items=section.items %}
+                        {% assign width=section.width %}
+
+                        {% include section.html icon=icon title=title items=items width=width %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

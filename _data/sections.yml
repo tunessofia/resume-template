@@ -1,0 +1,11 @@
+- section: "Experience"
+  icon: "work"
+  items:
+    - { year: 'January 2021 - Current', place: 'Your workplace', title: 'Your job title', description: "Describe your main job tasks" }
+
+- section: "Education"
+  icon: "education"
+  width: "w-2/3"
+  items:
+    - { year: 'January 2020 - December 2020', place: 'Your school', title: 'Your course title', description: "Describe what you've learned" }
+    
